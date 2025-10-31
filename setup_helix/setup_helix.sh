@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# install the configuration
+mkdir -p "$HOME/.config/helix/"
+cp ./helix_config.toml "$HOME/.config/helix/config.toml"
+
 mkdir -p "$HOME/Desktop/Software/HelixEditor"
 cd "$HOME/Desktop/Software/HelixEditor"
 
@@ -13,8 +17,4 @@ cat << EOF >> "$HOME/.bashrc"
 alias hlx="/home/jeanr/Desktop/Software/HelixEditor/helix-25.07.1-x86_64.AppImage"
 
 EOF
-
-# install the configuration
-mkdir -p "$HOME/.config/helix/"
-cp ./helix_config.toml "$HOME/.config/helix/config.toml"
 
