@@ -1,0 +1,42 @@
+theme = "dark_plus"
+
+[editor]
+line-number = "relative"
+mouse = false
+cursorline = true
+cursorcolumn = true
+bufferline = "always"
+indent-guides.render = true
+rulers = [79, 120]
+end-of-line-diagnostics = "hint"
+
+[editor.soft-wrap]
+enable = true
+
+[keys.normal."space"]
+o = "file_picker_in_current_buffer_directory"
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = ["diagnostics", "selections", "position", "position-percentage", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "NOR"
+mode.insert = "INS"
+mode.select = "SEL"
+
+[editor.lsp]
+display-inlay-hints = true
+
+[keys.normal.'\']
+space = [''':pipe-to tmux load-buffer - \; paste-buffer -dpr -t '{top-right}' \; send-keys -t '{top-right}' Enter''']
+'\' = [''':sh tmux send-keys Q/# Space %% Enter O# Escape Escape Nvg.a BSpace BSpace Escape Escape \\ Space uuQ''']
+# the above is the quivalent of putting, in .tmux.conf: send-keys Q/#\s%%\rO#\e\eNvg.a\b\b\e\e\\\suuQ
+# for explanations, see: https://github.com/helix-editor/helix/issues/2806#issuecomment-1551801413
+# user manual:
+# - have a REPL on the right
+# - cells need to be delimited by # %%
+# - withing a cell, type \\ to initialize running macro
+# - now type q to run any cell on the REPL to the right
+# - n and N go to the next resp. previous cell
+
