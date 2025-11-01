@@ -26,7 +26,31 @@ cat << EOF >> "$HOME/.bashrc"
 EOF
 
 # setup my scripts
+mkdir "$HOME/my_scripts"
+cd "$HOME/my_scripts"
 
 # hg/hx
+wget https://raw.githubusercontent.com/jerabaul29/config_scripts_snippets/refs/heads/main/scripts/hist_grep_exec/histg.sh
+wget https://raw.githubusercontent.com/jerabaul29/config_scripts_snippets/refs/heads/main/scripts/hist_grep_exec/histx.sh
 
 # zh/zx
+wget https://raw.githubusercontent.com/jerabaul29/config_scripts_snippets/refs/heads/main/scripts/z_grep_exec/zg.sh
+wget https://raw.githubusercontent.com/jerabaul29/config_scripts_snippets/refs/heads/main/scripts/z_grep_exec/zx.sh
+
+# ga
+wget https://raw.githubusercontent.com/jerabaul29/config_scripts_snippets/refs/heads/main/scripts/ga/git_add_commit_push.sh
+chmod +x git_add_commit_push.sh
+
+# add all aliases
+cat << EOF >> "$HOME/.bashrc"
+
+source "$HOME/my_scripts/zg.sh"
+source "$HOME/my_scripts/zx.sh"
+
+source "$HOME/my_scripts/histg.sh"
+source "$HOME/my_scripts/histx.sh"
+
+alias ga="$HOME/my_scripts/git_add_commit_push.sh"
+
+EOF
+
