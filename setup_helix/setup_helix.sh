@@ -6,8 +6,8 @@ cp ./helix_config.toml "$HOME/.config/helix/config.toml"
 
 # install the languages configuration
 # note that the main version lives at: https://github.com/helix-editor/helix/blob/master/languages.toml
-# and this is just a modified / edited version of it
-# there may be incompatibilities arising when a new version of helix comes out - if so, get it from there and edit as needed :) .
+# and this is just the modifications that should be applied to it (will be merged automatically)
+# there may be incompatibilities arising when a new version of helix comes out - if so, edit as needed :) .
 cp ./languages.toml "$HOME/.config/helix/languages.toml"
 
 mkdir -p "$HOME/Desktop/Software/HelixEditor"
