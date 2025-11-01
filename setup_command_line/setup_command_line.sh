@@ -16,3 +16,17 @@ if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
 fi
 
 EOF
+
+# setup z
+git clone https://github.com/rupa/z.git ~/.z --depth=1
+cat << EOF >> "$HOME/.bashrc"
+
+. "$HOME/.z/z.sh"
+
+EOF
+
+# setup my scripts
+
+# hg/hx
+
+# zh/zx
