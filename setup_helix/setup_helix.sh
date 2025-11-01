@@ -18,3 +18,5 @@ alias hlx="/home/jeanr/Desktop/Software/HelixEditor/helix-25.07.1-x86_64.AppImag
 
 EOF
 
+# install various LSPs
+cargo install --git https://github.com/blopker/codebook codebook-lsp

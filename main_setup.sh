@@ -1,5 +1,9 @@
 #!/bin/bash
 
+cd ./setup_standard_libraries
+bash setup_standard_libraries.sh
+cd "$HOME/Desktop/Git/setups"
+
 cd ./setup_command_line
 bash setup_command_line.sh
 cd "$HOME/Desktop/Git/setups"
