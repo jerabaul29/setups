@@ -26,3 +26,5 @@ EOF
 
 # install various LSPs
 cargo install --git https://github.com/blopker/codebook codebook-lsp
+cargo install --git https://github.com/erasin/hx-lsp hx-lsp
+
