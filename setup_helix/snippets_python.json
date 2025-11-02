@@ -1,0 +1,7 @@
+{
+  "fprint": {
+    "prefix": "fp",
+    "body": "print(f\"{$0}\")",
+    "description": "f-print"
+  }
+}

@@ -28,3 +28,7 @@ EOF
 cargo install --git https://github.com/blopker/codebook codebook-lsp
 cargo install --git https://github.com/erasin/hx-lsp hx-lsp
 
+# TODO:
+# - add hx-lsp to languages
+# - copy the snippets and code actions from a setup folder to the .config correct location
+

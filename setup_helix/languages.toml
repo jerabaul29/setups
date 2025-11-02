@@ -2,6 +2,9 @@
 command = "codebook-lsp"
 args = ["serve"]
 
+[language-server.hx-lsp]
+command = "hx-lsp"
+
 [[language]]
 name = "rust"
 language-servers = [ "rust-analyzer", "codebook" ]
@@ -12,7 +15,7 @@ language-servers = [ "clangd", "codebook" ]
 
 [[language]]
 name = "python"
-language-servers = ["ty", "ruff", "jedi", "pylsp", "codebook" ]
+language-servers = ["ty", "ruff", "jedi", "pylsp", "codebook", "hx-lsp" ]
 
 [[language]]
 name = "markdown"
