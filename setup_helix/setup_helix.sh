@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# install the configuration
+# install the general helix configuration
 mkdir -p "$HOME/.config/helix/"
 cp ./helix_config.toml "$HOME/.config/helix/config.toml"
 
@@ -8,7 +8,11 @@ cp ./helix_config.toml "$HOME/.config/helix/config.toml"
 # note that the main version lives at: https://github.com/helix-editor/helix/blob/master/languages.toml
 # and this is just the modifications that should be applied to it (will be merged automatically)
 # there may be incompatibilities arising when a new version of helix comes out - if so, edit as needed :) .
-cp ./languages.toml "$HOME/.config/helix/languages.toml"
+cp ./helix_languages.toml "$HOME/.config/helix/languages.toml"
+
+# install the snippets
+mkdir -p "$HOME/.config/helix/snippets"
+cp ./snippets_python.json "$HOME/.config/helix/snippets/python.json"
 
 mkdir -p "$HOME/Desktop/Software/HelixEditor"
 cd "$HOME/Desktop/Software/HelixEditor"
@@ -27,8 +31,4 @@ EOF
 # install various LSPs
 cargo install --git https://github.com/blopker/codebook codebook-lsp
 cargo install --git https://github.com/erasin/hx-lsp hx-lsp
-
-# TODO:
-# - add hx-lsp to languages
-# - copy the snippets and code actions from a setup folder to the .config correct location
 

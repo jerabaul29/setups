@@ -3,5 +3,37 @@
     "prefix": "fp",
     "body": "print(f\"{$0}\")",
     "description": "f-print"
+  },
+  "ipython_preamble": {
+    "prefix": "ipb",
+    "body": [
+      "# %%",
+      "",
+      "exit()",
+      "",
+      "# %%",
+      "",
+      "ipython3",
+      "",
+      "# %%",
+      "",
+      "%reset -f",
+      "",
+      "# %%",
+      "",
+      "%pdb on",
+      "# pdb off",
+      "",
+      "# %%",
+      "",
+      "from loguru import logger",
+      "",
+      "# %%",
+      "",
+      "$0",
+      "",
+      "# %%"
+    ],
+    "description": "my standard preamble for ipython style coding"
   }
 }

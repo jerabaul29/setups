@@ -56,8 +56,8 @@ EOF
 
 # set up tools I like and use
 sudo apt update
-sudo apt install tree
-sudo apt install fzf
+sudo apt install tree -y
+sudo apt install fzf -y 
 
 cat << EOF >> "$HOME/.bashrc"
 
