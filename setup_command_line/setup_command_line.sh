@@ -54,3 +54,14 @@ alias ga="$HOME/my_scripts/git_add_commit_push.sh"
 
 EOF
 
+# set up tools I like and use
+sudo apt update
+sudo apt install tree
+sudo apt install fzf
+
+cat << EOF >> "$HOME/.bashrc"
+
+source /usr/share/doc/fzf/examples/key-bindings.bash
+
+EOF
+
