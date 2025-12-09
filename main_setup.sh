@@ -1,5 +1,8 @@
 #!/bin/bash
 
+gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+# setxkbmap no
+
 cd ./setup_standard_libraries
 bash setup_standard_libraries.sh
 cd "$HOME/Desktop/Git/setups"

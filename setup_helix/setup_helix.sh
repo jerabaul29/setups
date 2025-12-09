@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source ~/.bashrc
+
 # install the general helix configuration
 mkdir -p "$HOME/.config/helix/"
 cp ./helix_config.toml "$HOME/.config/helix/config.toml"
@@ -32,3 +34,4 @@ EOF
 cargo install --git https://github.com/blopker/codebook codebook-lsp
 cargo install --git https://github.com/erasin/hx-lsp hx-lsp
 
+source ~/.bashrc
