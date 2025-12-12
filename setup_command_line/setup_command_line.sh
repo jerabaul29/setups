@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -i
 
 # setup https://github.com/magicmonty/bash-git-prompt
 git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1

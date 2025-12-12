@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -i
 
 # check if tmux is installed; if not, install
 if command -v tmux &> /dev/null; then
