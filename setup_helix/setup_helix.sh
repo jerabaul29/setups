@@ -30,6 +30,15 @@ alias hlx="/home/jeanr/Desktop/Software/HelixEditor/helix-25.07.1-x86_64.AppImag
 
 EOF
 
+# fix issues with cargo sourcing
+which cargo
+if [ $? -eq 0 ]; then
+    echo "Cargo is working"
+else
+    echo "Cargo not working; try sourcing by hand"
+    bash ~/.cargo/env
+fi
+
 # install various LSPs
 cargo install --git https://github.com/blopker/codebook codebook-lsp
 cargo install --git https://github.com/erasin/hx-lsp hx-lsp
