@@ -20,3 +20,7 @@ language-servers = ["ty", "ruff", "jedi", "pylsp", "codebook", "hx-lsp" ]
 [[language]]
 name = "markdown"
 language-servers = [ "marksman", "markdown-oxide", "codebook" ]
+
+[[language]]
+name = "bash" 
+language-servers = [ "bash-language-server", "codebook" ]
