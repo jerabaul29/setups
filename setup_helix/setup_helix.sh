@@ -26,7 +26,7 @@ chmod +x helix-25.07.1-x86_64.AppImage
 # install alias
 cat << EOF >> "$HOME/.bashrc"
 
-alias hlx="/home/jeanr/Desktop/Software/HelixEditor/helix-25.07.1-x86_64.AppImage"
+alias hlx="/home/$USER/Desktop/Software/HelixEditor/helix-25.07.1-x86_64.AppImage"
 
 EOF
 
