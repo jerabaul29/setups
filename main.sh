@@ -27,3 +27,8 @@ source "$HOME/.bashrc"
 cd ./setup_helix
 bash setup_helix.sh
 cd "$HOME/Desktop/Git/setups"
+
+source "$HOME/.bashrc"
+cd ./setup_nvm_npm
+bash setup_nvm_npm.sh
+cd "$HOME/Desktop/Git/setups"
