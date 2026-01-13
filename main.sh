@@ -32,3 +32,4 @@ source "$HOME/.bashrc"
 cd ./setup_nvm_npm
 bash setup_nvm_npm.sh
 cd "$HOME/Desktop/Git/setups"
+npm install -g @github/copilot
