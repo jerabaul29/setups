@@ -32,6 +32,8 @@ source "$HOME/.bashrc"
 cd ./setup_nvm_npm
 bash setup_nvm_npm.sh
 cd "$HOME/Desktop/Git/setups"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 npm install -g @github/copilot
 
 source "$HOME/.bashrc"

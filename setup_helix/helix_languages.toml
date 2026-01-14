@@ -7,7 +7,7 @@ command = "hx-lsp"
 
 [[language]]
 name = "rust"
-language-servers = [ "rust-analyzer", "codebook" ]
+language-servers = [ "rust-analyzer", "codebook", "hx-lsp" ]
 
 [[language]]
 name = "cpp"
@@ -19,8 +19,8 @@ language-servers = ["ty", "ruff", "jedi", "pylsp", "codebook", "hx-lsp" ]
 
 [[language]]
 name = "markdown"
-language-servers = [ "marksman", "markdown-oxide", "codebook" ]
+language-servers = [ "marksman", "markdown-oxide", "codebook", "hx-lsp" ]
 
 [[language]]
 name = "bash" 
-language-servers = [ "bash-language-server", "codebook" ]
+language-servers = [ "bash-language-server", "codebook", "hx-lsp" ]
