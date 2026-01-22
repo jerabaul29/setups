@@ -41,3 +41,9 @@ cd ./setup_bash
 bash setup_bash.sh
 cd "$HOME/Desktop/Git/setups"
 
+source "$HOME/.bashrc"
+cd ./setup_python
+bash python_dev_setup.sh
+cd "$HOME/Desktop/Git/setups"
+
+
