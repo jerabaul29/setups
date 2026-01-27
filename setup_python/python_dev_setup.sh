@@ -35,3 +35,6 @@ alias hj="$HOME/my_scripts/helix_and_repl.sh"
 EOF
 cd "$CRRT_DIR"
 
+history -s "mamba activate dev"
+history -s "mamba deactivate"
+
