@@ -35,6 +35,7 @@ cd "$HOME/Desktop/Git/setups"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 npm install -g @github/copilot
+history -s "copilot --allow-all-tools"
 
 source "$HOME/.bashrc"
 cd ./setup_bash

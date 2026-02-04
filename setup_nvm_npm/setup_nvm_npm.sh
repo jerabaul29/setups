@@ -1,6 +1,6 @@
 #!/bin/bash -i
 
-echo "install nvm, node, copilot cli"
+echo "install nvm, node"
 echo "--- nvm"
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 # sourcing is the usual way to do it, but does not work within the script (probably because of bashrc interactive session check)
