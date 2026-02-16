@@ -1,5 +1,9 @@
 #!/bin/bash -i
 
+# fighting bash to make things work in non interactive sessions...
+HISTFILE=~/.bash_history
+set -o history
+
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 # setxkbmap no
 
@@ -37,14 +41,21 @@ export NVM_DIR="$HOME/.nvm"
 npm install -g @github/copilot
 history -s "copilot --allow-all-tools"
 
+echo "--- start setup_bash ---"
 source "$HOME/.bashrc"
 cd ./setup_bash
 bash setup_bash.sh
 cd "$HOME/Desktop/Git/setups"
+echo "--- done setup_bash ---"
 
+echo "--- start setup_python ---"
 source "$HOME/.bashrc"
 cd ./setup_python
 bash python_dev_setup.sh
 cd "$HOME/Desktop/Git/setups"
+echo "--- done setup_python ---"
+
+history -w
+sleep 10
 
 
