@@ -106,6 +106,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 npm install -g @github/copilot
 history -s "copilot --allow-all-tools"
+npm install -g @anthropic-ai/claude-code
+history -s "claude --dangerously-skip-permissions"
+npm install -g @openai/codex
+history -s "codex --full-auto"
 
 echo "--- start setup_bash ---"
 source "$HOME/.bashrc"
@@ -125,4 +129,16 @@ echo "--- done setup_python ---"
 history -w
 sleep 10
 
+echo "--- start setup_latex ---"
+source "$HOME/.bashrc"
+cd ./setup_latex
+bash setup_latex.sh
+cd "$HOME/Desktop/Git/setups"
+echo "--- done setup_latex"
 
+# TODO: binary blob setup
+# - register bash command / script to set it up
+# - gpg decrypt, untar, run entry point
+
+history -w
+sleep 10
