@@ -10,6 +10,7 @@ gpg --output "${PATH_TO_BLOB}/${BLOB_BASENAME}.zip" --decrypt "${PATH_TO_BLOB}/$
 unzip "${PATH_TO_BLOB}/${BLOB_BASENAME}.zip" -d "${PATH_TO_BLOB}/extracted/"
 
 cd "${PATH_TO_BLOB}/extracted/generate_blob/"
+pwd
 bash "$ENTRY_POINT_BLOB"
 
 cd "${PWD_START}"
