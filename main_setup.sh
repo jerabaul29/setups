@@ -134,11 +134,20 @@ source "$HOME/.bashrc"
 cd ./setup_latex
 bash setup_latex.sh
 cd "$HOME/Desktop/Git/setups"
-echo "--- done setup_latex"
+echo "--- done setup_latex ---"
 
 # TODO: binary blob setup
 # - register bash command / script to set it up
 # - gpg decrypt, untar, run entry point
+
+echo "--- start setup_encrypted_blob  ---"
+mkdir -p ~/bin
+mv ./setup_encrypted_blob/setup_encrypted_blob.sh ~/bin/setup_encrypted_blob.sh
+chmod +x ~/bin/setup_encrypted_blob.sh
+history -s "setup_encrypted_blob.sh"
+echo "--- done setup_encrypted_blob"
+
+echo ""
 
 history -w
 sleep 10
