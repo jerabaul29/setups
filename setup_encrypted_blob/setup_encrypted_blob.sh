@@ -9,7 +9,7 @@ ENTRY_POINT_BLOB="main.sh"
 gpg --output "${PATH_TO_BLOB}/${BLOB_BASENAME}.zip" --decrypt "${PATH_TO_BLOB}/${BLOB_BASENAME}.zip.gpg"
 unzip "${PATH_TO_BLOB}/${BLOB_BASENAME}.zip" -d "${PATH_TO_BLOB}/extracted/"
 
-cd "${PATH_TO_BLOB}/extracted/"
+cd "${PATH_TO_BLOB}/extracted/generate_blob/"
 bash "$ENTRY_POINT_BLOB"
 
 cd "${PWD_START}"
