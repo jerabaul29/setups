@@ -142,7 +142,7 @@ echo "--- done setup_latex ---"
 
 echo "--- start setup_encrypted_blob  ---"
 mkdir -p ~/bin
-mv ./setup_encrypted_blob/setup_encrypted_blob.sh ~/bin/setup_encrypted_blob.sh
+cp ./setup_encrypted_blob/setup_encrypted_blob.sh ~/bin/setup_encrypted_blob.sh
 chmod +x ~/bin/setup_encrypted_blob.sh
 history -s "setup_encrypted_blob.sh"
 echo "--- done setup_encrypted_blob"
