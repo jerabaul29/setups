@@ -73,33 +73,60 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 
 sudo apt update
 
+echo "--- start setup_standard_libraries ---"
+date
 source "$HOME/.bashrc"
 cd ./setup_standard_libraries
 # TODO: here and everywhere similar: should I really use source to inherit the definitions etc?
 bash setup_standard_libraries.sh
 cd "$HOME/Desktop/Git/setups"
+echo "--- done setup_standard_libraries ---"
+echo ""
+echo ""
 
+echo "--- start setup_command_line ---"
+date
 source "$HOME/.bashrc"
 cd ./setup_command_line
 bash setup_command_line.sh
 # TODO: dummy git setup
 cd "$HOME/Desktop/Git/setups"
+echo "--- done setup_command_line ---"
+echo ""
+echo ""
 
+echo "--- start setup_tmux ---"
+date
 source "$HOME/.bashrc"
 cd ./setup_tmux
 bash setup_tmux.sh
 cd "$HOME/Desktop/Git/setups"
+echo "--- done setup_tmux ---"
+echo ""
+echo ""
 
+echo "--- start setup_rust ---"
+date
 source "$HOME/.bashrc"
 cd ./setup_rust
 bash setup_rust.sh
 cd "$HOME/Desktop/Git/setups"
+echo "--- done setup_rust ---"
+echo ""
+echo ""
 
+echo "--- start setup_helix ---"
+date
 source "$HOME/.bashrc"
 cd ./setup_helix
 bash setup_helix.sh
 cd "$HOME/Desktop/Git/setups"
+echo "--- done setup_helix ---"
+echo ""
+echo ""
 
+echo "--- start setup_nvm_npm ---"
+date
 source "$HOME/.bashrc"
 cd ./setup_nvm_npm
 bash setup_nvm_npm.sh
@@ -113,39 +140,52 @@ npm install -g @anthropic-ai/claude-code
 history -s "claude --dangerously-skip-permissions"
 npm install -g @openai/codex
 history -s "codex --full-auto"
+echo "--- done setup_nvm_npm ---"
+echo ""
+echo ""
 
 echo "--- start setup_bash ---"
+date
 source "$HOME/.bashrc"
 cd ./setup_bash
 bash setup_bash.sh
 cd "$HOME/Desktop/Git/setups"
 history -s "eval \"$(ssh-agent -s)\""
 echo "--- done setup_bash ---"
+echo ""
+echo ""
 
 echo "--- start setup_python ---"
+date
 source "$HOME/.bashrc"
 cd ./setup_python
 bash python_dev_setup.sh
 cd "$HOME/Desktop/Git/setups"
 echo "--- done setup_python ---"
-
-history -w
-sleep 10
+echo ""
+echo ""
 
 echo "--- start setup_latex ---"
+date
 source "$HOME/.bashrc"
 cd ./setup_latex
 bash setup_latex.sh
 cd "$HOME/Desktop/Git/setups"
 echo "--- done setup_latex ---"
+echo ""
+echo ""
 
 echo "--- start setup_encrypted_blob  ---"
+date
 mkdir -p ~/bin
 cp ./setup_encrypted_blob/setup_encrypted_blob.sh ~/bin/setup_encrypted_blob.sh
 chmod +x ~/bin/setup_encrypted_blob.sh
 history -s "setup_encrypted_blob.sh"
-echo "--- done setup_encrypted_blob"
+echo "--- done setup_encrypted_blob ---"
+echo ""
+echo ""
 
+date
 echo ""
 
 history -w
