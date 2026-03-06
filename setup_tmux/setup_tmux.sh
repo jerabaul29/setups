@@ -6,7 +6,7 @@ if command -v tmux &> /dev/null; then
 else
   echo "tmux is not installed."
   echo "install it now"
-  sudo apt update && sudo apt install -y tmux
+  sudo apt install -y tmux
 fi
 
 cd "$HOME"

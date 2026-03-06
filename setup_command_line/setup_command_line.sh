@@ -55,7 +55,6 @@ alias ga="$HOME/my_scripts/git_add_commit_push.sh"
 EOF
 
 # set up tools I like and use
-sudo apt update
 sudo apt install tree -y
 sudo apt install fzf -y 
 

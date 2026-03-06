@@ -21,6 +21,7 @@ cd "$HOME/Desktop/Software/HelixEditor"
 
 # get helix and make it executable; remember to update both following lines when a new release is available!
 wget https://github.com/helix-editor/helix/releases/download/25.07.1/helix-25.07.1-x86_64.AppImage
+echo "0d00848ca858e415a4b4a90612702a35aa491421c658c45a06774a265bc4c4f6  helix-25.07.1-x86_64.AppImage" | sha256sum -c -
 chmod +x helix-25.07.1-x86_64.AppImage
 
 # install alias

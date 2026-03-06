@@ -71,6 +71,8 @@ shopt -s nullglob
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 # setxkbmap no
 
+sudo apt update
+
 source "$HOME/.bashrc"
 cd ./setup_standard_libraries
 # TODO: here and everywhere similar: should I really use source to inherit the definitions etc?
