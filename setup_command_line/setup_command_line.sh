@@ -41,6 +41,10 @@ wget https://raw.githubusercontent.com/jerabaul29/config_scripts_snippets/refs/h
 wget https://raw.githubusercontent.com/jerabaul29/config_scripts_snippets/refs/heads/main/scripts/ga/git_add_commit_push.sh
 chmod +x git_add_commit_push.sh
 
+# grf and grt
+wget https://raw.githubusercontent.com/jerabaul29/config_scripts_snippets/refs/heads/main/scripts/sync_with_IP/sync_with_IP.sh
+chmod +x sync_with_IP.sh
+
 # add all aliases
 cat << EOF >> "$HOME/.bashrc"
 
@@ -49,6 +53,8 @@ source "$HOME/my_scripts/zx.sh"
 
 source "$HOME/my_scripts/histg.sh"
 source "$HOME/my_scripts/histx.sh"
+
+source "$HOME/my_scripts/sync_with_IP.sh"
 
 alias ga="$HOME/my_scripts/git_add_commit_push.sh"
 
