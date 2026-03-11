@@ -62,7 +62,7 @@ source "$HOME/my_scripts/sync_with_IP.sh"
 
 alias ga="$HOME/my_scripts/git_add_commit_push.sh"
 
-alias ct="$HOME/tmux_and_ai_cli.sh"
+alias ct="$HOME/my_scripts/tmux_and_ai_cli.sh"
 
 EOF
 
