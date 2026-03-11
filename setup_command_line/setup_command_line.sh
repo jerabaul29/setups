@@ -45,6 +45,10 @@ chmod +x git_add_commit_push.sh
 wget https://raw.githubusercontent.com/jerabaul29/config_scripts_snippets/refs/heads/main/scripts/sync_with_IP/sync_with_IP.sh
 chmod +x sync_with_IP.sh
 
+# ct
+wget https://raw.githubusercontent.com/jerabaul29/config_scripts_snippets/refs/heads/main/scripts/tmux_and_ai_cli/tmux_and_ai_cli.sh
+chmod +x tmux_and_ai_cli.sh
+
 # add all aliases
 cat << EOF >> "$HOME/.bashrc"
 
@@ -57,6 +61,8 @@ source "$HOME/my_scripts/histx.sh"
 source "$HOME/my_scripts/sync_with_IP.sh"
 
 alias ga="$HOME/my_scripts/git_add_commit_push.sh"
+
+alias ct="$HOME/tmux_and_ai_cli.sh"
 
 EOF
 
