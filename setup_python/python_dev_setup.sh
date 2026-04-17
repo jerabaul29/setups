@@ -13,7 +13,7 @@ mamba config list
 # create a "dev" standard env
 mamba create -n dev
 mamba activate dev
-mamba install -y numpy matplotlib xarray scipy pip ipython pandas
+mamba install -y numpy matplotlib xarray scipy pip ipython pandas loguru polars complexipy
 
 pip install "python-lsp-server[all]"
 pip install -U jedi-language-server
