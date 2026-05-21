@@ -135,7 +135,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 npm install -g @github/copilot
 mkdir "$HOME/.copilot"
-history -s "copilot --allow-all-tools"
+history -s "copilot --allow-all-tools --allow-all-paths --allow-all-commands --allow-all-urls"
 npm install -g @anthropic-ai/claude-code
 history -s "claude --dangerously-skip-permissions"
 npm install -g @openai/codex
