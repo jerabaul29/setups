@@ -68,6 +68,15 @@ shopt -s nullglob
 ###############################################################################
 
 # ----------------------------------------
+# guard against re-running the setup on a machine where it has already been run
+SETUP_MARKER_FILE="$HOME/.setup_jerabaul29_is_run"
+
+if [ -f "$SETUP_MARKER_FILE" ]; then
+    echo "ERROR: ${SETUP_MARKER_FILE} already exists; this setup has already been run on this machine. Aborting." >&2
+    exit 1
+fi
+
+# ----------------------------------------
 gsettings set org.gnome.desktop.interface color-scheme prefer-dark
 # setxkbmap no
 
@@ -77,7 +86,6 @@ echo "--- start setup_standard_libraries ---"
 date
 source "$HOME/.bashrc"
 cd ./setup_standard_libraries
-# TODO: here and everywhere similar: should I really use source to inherit the definitions etc?
 bash setup_standard_libraries.sh
 cd "$HOME/Desktop/Git/setups"
 echo "--- done setup_standard_libraries ---"
@@ -89,7 +97,6 @@ date
 source "$HOME/.bashrc"
 cd ./setup_command_line
 bash setup_command_line.sh
-# TODO: dummy git setup
 cd "$HOME/Desktop/Git/setups"
 echo "--- done setup_command_line ---"
 echo ""
@@ -134,7 +141,7 @@ cd "$HOME/Desktop/Git/setups"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 npm install -g @github/copilot
-mkdir "$HOME/.copilot"
+mkdir -p "$HOME/.copilot"
 history -s "copilot --yolo"
 npm install -g @anthropic-ai/claude-code
 history -s "claude --dangerously-skip-permissions"
@@ -187,6 +194,9 @@ echo ""
 
 date
 echo ""
+
+# mark this setup as having been run on this machine, to guard against accidental re-runs
+touch "$SETUP_MARKER_FILE"
 
 history -w
 sleep 10
