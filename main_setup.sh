@@ -182,6 +182,15 @@ echo "--- done setup_latex ---"
 echo ""
 echo ""
 
+echo "--- start setup_vscode ---"
+date
+cd ./setup_vscode
+bash setup_vscode.sh
+cd "$HOME/Desktop/Git/setups"
+echo "--- done setup_vscode ---"
+echo ""
+echo ""
+
 echo "--- start setup_encrypted_blob  ---"
 date
 mkdir -p ~/bin
