@@ -185,7 +185,7 @@ echo ""
 echo "--- start setup_vscode ---"
 date
 cd ./setup_vscode
-bash setup_vscode.sh
+bash setup_vscode.sh || echo "WARNING: setup_vscode failed, continuing; see message above"
 cd "$HOME/Desktop/Git/setups"
 echo "--- done setup_vscode ---"
 echo ""
