@@ -5,3 +5,12 @@ sudo apt install build-essential libc6-dev -y
 sudo apt install libutil-dev librt-dev libpthread-stubs0-dev libm-dev libdl-dev -y
 sudo apt install lld -y
 sudo apt install netcdf-bin -y
+
+sudo apt install podman -y
+
+sudo apt-get install apparmor-profiles apparmor-utils bubblewrap -y
+sudo install -m 0644 \
+  /usr/share/apparmor/extra-profiles/bwrap-userns-restrict \
+  /etc/apparmor.d/bwrap-userns-restrict
+sudo apparmor_parser -r /etc/apparmor.d/bwrap-userns-restrict
+
