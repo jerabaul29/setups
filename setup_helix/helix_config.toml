@@ -18,7 +18,7 @@ o = "file_picker_in_current_buffer_directory"
 
 [editor.statusline]
 left = ["mode", "spinner"]
-center = ["file-name"]
+# center = ["file-name"]
 right = ["diagnostics", "selections", "position", "position-percentage", "file-encoding", "file-line-ending", "file-type"]
 separator = "│"
 mode.normal = "NOR"
